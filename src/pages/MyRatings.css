@@ -1,0 +1,332 @@
+.general {
+    position: relative;
+    color: white;
+    /* margin-left: 180px; */
+    min-height: 100vh;
+    width: 100%;
+    padding-left: 200px;
+    padding-top: 20px;
+    background-image: url('/arti.jpg'); /* Image Path */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+    z-index: 1;
+}
+
+
+.feed-container-rat {
+    color: black;
+    background-color: white;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-left: 50px;
+    padding: 20px;
+    /* height: calc(100vh - 100px); <-- USUWAMY */
+    /* display: flex; <-- TEŻ USUWAMY */
+    /* flex-direction: column; <-- USUWAMY */
+    /* overflow: hidden; <-- już wcześniej usunęliśmy */
+  }
+  
+
+.top-container{
+    position:sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.feed-title{
+    font-size: 2rem;
+    
+}
+
+.feed-element{
+    border: 1px solid #a6652e;
+    display: block;
+    height: 200px;
+    margin-top: 40px;
+    padding:10px;
+}
+
+.feed-artwork{
+    display: inline-block;
+    height: 100px;
+    width: 400px;
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+.img-art{
+    height: 90px;
+    width: 90px;
+    /* object-fit: cover; */
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.artwork-shinfo{
+    display: inline-block;
+}
+
+.rating-container{
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid grey;
+    height: 100px;
+    
+}
+
+.my-rating{
+    display: flex;
+    align-items: top;
+}
+
+.comment{
+    background-color: #EEEEEE;
+    color: black;
+    height: 40px;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.artwork-with-rating{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.react-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.filter-container {
+    position: relative; 
+    display: inline-block;
+}
+
+.filters-rat {
+    display: flex;
+    align-items: center; 
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    gap: 8px; 
+    background-color: #f0f0f0; 
+}
+
+.filter-dropdown-box {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 200px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 999;
+}
+
+
+.filter-dropdown-box.show {
+    display: block;
+}
+
+.rating-option {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Rozstawienie między checkboxem, numerem i gwiazdkami */
+}
+
+.rating-stars {
+    display: flex; /* Zapewnia, że gwiazdki ustawiają się w jednym rzędzie */
+    align-items: center;
+}
+
+.filters-all{
+    border: 1px solid grey;
+}
+
+  
+/* Lista ocenionych artworków */
+.ratings-list {
+    
+}
+
+/* Każdy element ocenionej listy */
+.rating-item {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    border: 1px solid #a6652e;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+}
+
+/* .rating-item:hover {
+    background: #f7f7f7;
+    transform: scale(1.02);
+} */
+
+/* Separator między oceną a komentarzem */
+.rating-separator {
+    width: 2px;
+    height: 40px;
+    background: #a6652e;
+    margin-right: 15px;
+}
+
+/* Gwiazdki obok siebie */
+.rating-stars {
+    display: flex;
+    gap: 5px;
+    margin-right: 15px;
+}
+
+/* Styl komentarza */
+.rating-comment {
+    font-size: 14px;
+    color: #555;
+    max-width: 60%;
+    word-wrap: break-word;
+    margin-top: 6px;
+}
+
+/* Zdjęcie artworku */
+.rating-img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+/* Główna sekcja tekstowa */
+.rating-text {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+/* Tytuł i kategoria */
+.rating-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+.ratings-scroll-wrapper {
+    padding-right: 6px;
+    margin-top: 20px;
+    /* overflow-y: auto; <-- USUWAMY */
+    /* overflow-x: hidden; <-- USUWAMY */
+    /* max-height: calc(100vh - 160px); <-- USUWAMY */
+  }
+  
+
+  
+  
+  /* Optional: Hide ugly scrollbar in WebKit browsers */
+  .ratings-scroll-wrapper::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .ratings-scroll-wrapper::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 1024px) {
+  .general {
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    height: 100%
+  }
+
+  .feed-container-rat {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0px;
+    margin-left: 0;
+    position: relative;
+    height: auto;
+  }
+
+  .top-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  
+
+  .rating-item {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 15px; 
+    padding: 10px;
+  }
+
+  .rating-img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0;
+  }
+  
+  
+  .feed-container,
+  .feed-container-rat {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    height: auto;
+    position: relative;
+    padding: 15px;
+    overflow-y: auto;     /* 👈 umożliwiamy przewijanie */
+  }
+  
+
+  .rating-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .rating-stars {
+    justify-content: center;
+  }
+
+  .rating-comment {
+    max-width: 100%;
+  }
+
+  .ratings-scroll-wrapper {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+  
