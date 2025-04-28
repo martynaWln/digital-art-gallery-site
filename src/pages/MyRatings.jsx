@@ -34,10 +34,7 @@ function MyRatings() {
     );
   };
 
-  const handleArtworkClick = (artworkId) => {
-    navigate(`/artworks1?artworkId=${artworkId}`);
-  };
-
+  
   const filteredArtworks = selectedRatings.length
     ? myRatedArtworks.filter((art) => selectedRatings.includes(art.rating))
     : myRatedArtworks;

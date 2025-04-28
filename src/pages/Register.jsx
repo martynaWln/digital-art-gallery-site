@@ -14,7 +14,6 @@ function Register() {
     username: '',
     email: '',
     password: '',
-    acceptTerms: false
   });
 
   const handleChange = (e) => {
@@ -27,10 +26,7 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.acceptTerms) {
-      alert("Please accept the terms and conditions.");
-      return;
-    }
+    
 
     try {
       const response = await axios.post("https://dag-backend-production.up.railway.app/users/register", {
@@ -85,18 +81,6 @@ function Register() {
               onChange={handleChange}
             />
           </div>
-          
-
-          {/* <div className="below">
-            <div className="raccept">
-              <input
-                type="checkbox"
-                name="acceptTerms"
-                checked={formData.acceptTerms}
-                onChange={handleChange}
-              />  I accept terms and conditions
-            </div>
-          </div> */}
 
           <button  className = "reg" type="submit">Register</button>
 

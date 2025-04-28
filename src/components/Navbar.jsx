@@ -33,7 +33,7 @@ function Navbar() {
 
   const handleLogout = () => {
     logout(); 
-    navigate("/");
+    navigate("/digital-art-gallery-site/");
   };
   
 
@@ -48,7 +48,7 @@ function Navbar() {
     <> 
       <nav className="navbar">
         <div className="navbar-container-2">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+          <Link to="/digital-art-gallery-site/" className="navbar-logo" onClick={closeMobileMenu}>
             Digital Art Gallery 
             {/* <HiOutlinePaintBrush className="icon-paint"/> */}
           </Link>

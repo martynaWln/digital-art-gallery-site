@@ -145,11 +145,11 @@
 .rating-option {
     display: flex;
     align-items: center;
-    gap: 5px; /* Rozstawienie między checkboxem, numerem i gwiazdkami */
+    gap: 5px; 
 }
 
 .rating-stars {
-    display: flex; /* Zapewnia, że gwiazdki ustawiają się w jednym rzędzie */
+    display: flex; 
     align-items: center;
 }
 
