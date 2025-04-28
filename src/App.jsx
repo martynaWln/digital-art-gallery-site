@@ -24,7 +24,7 @@ function App() {
       <Navbar/>
       <ToastContainer position="top-center" />
         <Routes>
-          <Route path="/digital-art-gallery" element={<Home />} />
+          <Route path="/digital-art-gallery-site" element={<Home />} />
           <Route path="/artworks" element={<Artworks1 />} />
           <Route path="/my-profile/*"
                 element={
