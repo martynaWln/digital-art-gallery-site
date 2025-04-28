@@ -315,15 +315,16 @@ function Artworks1() {
   
     try {
       const newRating = {
-        ratingId: `${user.id}_${selectedArtwork.id}`,
-        artworkId: selectedArtwork.id,
+        ratingId: `${user.id}_${selectedArtwork.artworkId || selectedArtwork.id}`,
+        artworkId: selectedArtwork.artworkId || selectedArtwork.id,
         artworkTitle: selectedArtwork.title,
-        artworkAuthor: selectedArtwork.artistName || "Unknown",
-        artworkImage: selectedArtwork._links?.image?.href?.replace("{image_version}", "large") || "",
+        artworkAuthor: selectedArtwork.author || selectedArtwork.artistName || "Unknown",
+        artworkImage: selectedArtwork.imageUrl || selectedArtwork._links?.image?.href?.replace("{image_version}", "large") || "",
         rating,
         comment,
         userId: user.id
       };
+      
       
   
       const response = await axios.post("https://dag-backend-production.up.railway.app/ratings", newRating);
